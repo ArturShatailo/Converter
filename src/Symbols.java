@@ -24,9 +24,8 @@ public class Symbols extends Calculator{
             @Override
             public String convert(String value) {
 
-                char[] chars = value.toCharArray();
                 StringBuilder a = new StringBuilder();
-                for (char c : chars) {
+                for (char c : value.toCharArray()) {
                     a.append(c)
                             .append(": \\u")
                             .append(Integer.toHexString(c | 0x10000).substring(1))
@@ -41,9 +40,8 @@ public class Symbols extends Calculator{
             @Override
             public String convert(String value) {
 
-                char[] chars = value.toCharArray();
                 StringBuilder a = new StringBuilder();
-                for (char c : chars) {
+                for (char c : value.toCharArray()) {
                     a.append(c)
                             .append(": ")
                             .append(Character.getNumericValue(c))
