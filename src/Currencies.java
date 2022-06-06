@@ -7,9 +7,9 @@ public class Currencies extends Calculator {
     //This method checks users input and call required enum constant
     @Override
     public String defineMethod(){
-        return unit.equalsIgnoreCase("USD")
+        return unit.equalsIgnoreCase("USD") || unit.equalsIgnoreCase("dollar")
                 ? Currency.USD.convert(value)
-                : unit.equalsIgnoreCase("EUR")
+                : unit.equalsIgnoreCase("EUR") || unit.equalsIgnoreCase("euro")
                 ? Currency.EUR.convert(value)
                 : value;
     }
